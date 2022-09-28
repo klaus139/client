@@ -10,7 +10,8 @@ export default function AboutMe(props){
         Animations.animations.fadeInScreen(props.id);
     }
     const fadeInSubscription = 
-    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
+    ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
+    
     const SCREEN_CONSTSANTS = {
         description: "Full stack web and mobile developer with background knowledge of NODE.js stacks with react, along with a knack of building applications with utmost efficiency. Strong professional with a BSC willing to be an asset for an organization.",
         highlights:{

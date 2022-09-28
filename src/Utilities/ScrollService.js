@@ -50,6 +50,7 @@ export default class ScrollService{
             let screenFromDom = document.getElementById(screen.screen_name);
             if(!screenFromDom) 
             continue;
+            
 
             let fullyVisible = this.isElementInView(screenFromDom, 'complete');
             let partiallyVisible = this.isElementInView(screenFromDom, 'partial');
@@ -76,3 +77,5 @@ export default class ScrollService{
         }
     }
 }
+
+
