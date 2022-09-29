@@ -3,13 +3,16 @@ import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
 import ScrollService from "../../Utilities/ScrollService";
 import Animations from "../../Utilities/Animations";
 import './AboutMe.css';
+
+
 export default function AboutMe(props){
+
     let fadeInScreenHandler = (screen)=>{
         if(screen.fadeScreen !== props.id)
         return
         Animations.animations.fadeInScreen(props.id);
-    }
-    const fadeInSubscription = 
+    };
+    const fadeInSubscription =
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
     
     const SCREEN_CONSTSANTS = {

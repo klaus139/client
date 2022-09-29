@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { TOTAL_SCREENS, GET_SCREEN_INDEX} from '../../../Utilities/commonUtils';
 import ScrollService from '../../../Utilities/ScrollService';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
@@ -58,6 +58,14 @@ export default function Header() {
         setSelectedScreen(index);
         setShowHeaderOptions(false);
     };
+
+    useEffect(() =>{
+        return () => {
+            currentScreenSubscription.unsubscribe();
+
+        };
+
+    },[currentScreenSubscription]);
 
     
     return (
