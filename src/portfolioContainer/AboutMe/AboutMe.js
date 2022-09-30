@@ -8,7 +8,7 @@ import './AboutMe.css';
 export default function AboutMe(props){
 
     let fadeInScreenHandler = (screen)=>{
-        if(screen.fadeScreen !== props.id)
+        if(screen.fadeInScreen !== props.id)
         return
         Animations.animations.fadeInScreen(props.id);
     };
@@ -59,8 +59,9 @@ export default function AboutMe(props){
                         {renderHighlights()}
                     </div>
                     <div className="about-me-options">
-                    <button className='btn primary-btn'>
-                        Hire Me
+                    <button className='btn primary-btn'
+                        onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+                        >Hire Me
                     </button>
                     <a href='NICHOLAS.pdf' download='Nicholas igunbor.pdf'>
                     <button className='btn highlighted-btn'>Get Resume</button>

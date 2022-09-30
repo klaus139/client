@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import ScreenHeading from "/Users/decagon/Desktop/myportfolio/client/src/Utilities/ScreenHeading/ScreenHeading.js";
-import ScrollService from "/Users/decagon/Desktop/myportfolio/client/src/Utilities/ScrollService.js";
-import Animations from "/Users/decagon/Desktop/myportfolio/client/src/Utilities/Animations.js";
-import "./Resume.css";
+import React, {useState, useEffect } from "react";
+import ScreenHeading from '../../Utilities/ScreenHeading/ScreenHeading';
+import ScrollService from "../../Utilities/ScrollService";
+import Animations from "../../Utilities/Animations";
+import '/Users/decagon/Desktop/myportfolio/client/src/portfolioContainer/Resume/Resume.css';
 
 const Resume = (props) => {
   /* STATES */
@@ -59,7 +59,7 @@ const Resume = (props) => {
     { skill: "Express JS", ratingPercentage: 89 },
     { skill: "Node JS", ratingPercentage: 89 },
     { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Core Java", ratingPercentage: 80 },
+    { skill: "Python", ratingPercentage: 80 },
     { skill: "HTML", ratingPercentage: 80 },
     { skill: "CSS", ratingPercentage: 80 },
   ];
@@ -67,18 +67,18 @@ const Resume = (props) => {
   const projectsDetails = [
     {
       title: "Personal Portfolio Website",
-      duration: { fromDate: "2020", toDate: "2021" },
+      duration: { fromDate: "2022", toDate: "2021" },
       description:
         "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap",
+      subHeading: "Technologies Used: React JS, Bootsrap, Javascript, HTML, CSS",
     },
     {
-      title: "Mobile E-shop ",
-      duration: { fromDate: "2020", toDate: "2021" },
+      title: "Content management system",
+      duration: { fromDate: "2021", toDate: "2022" },
       description:
-        "An ecommerce application designed to sell products online wth payment system integration",
+        "A Content management system to manage the content of the website.",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+        "Technologies Used:  Pyhton, Django, Javascript, HTML, CSS, Bootstrap",
     },
     {
       title: "Ecommerce Website ",
@@ -93,23 +93,23 @@ const Resume = (props) => {
   const resumeDetails = [
     <div className="resume-screen-container" key="education">
       <ResumeHeading
-        heading={"University of Legon Accra, Ghana"}
-        subHeading={"BACHELOR OF SCIENCE INFORMATION TECHNOLOGY"}
-        fromDate={"2014"}
-        toDate={"2018"}
+        heading={"University of Benin, Nigeria"}
+        subHeading={"BACHELOR OF SCIENCE MICROBIOLOGY"}
+        fromDate={"2011"}
+        toDate={"2015"}
       />
 
       <ResumeHeading
         heading={"National Youth Service Corps"}
-        subHeading={"Ministry Of Science And Technogy. Uyo Akwa Ibom State"}
-        fromDate={"2019"}
-        toDate={"2020"}
+        subHeading={"IIFE TOWN. Uyo Akwa Ibom State"}
+        fromDate={"2016"}
+        toDate={"2017"}
       />
       <ResumeHeading
         heading={"High School "}
-        subHeading={"Command Secondary School Mbiri"}
-        fromDate={"2007"}
-        toDate={"2012"}
+        subHeading={"Notre Dame Secondary School"}
+        fromDate={"2002"}
+        toDate={"2008"}
       />
     </div>,
 
@@ -117,21 +117,19 @@ const Resume = (props) => {
     <div className="resume-screen-container" key="work-experience">
       <div className="experience-container">
         <ResumeHeading
-          heading={"Ehizeex Technoloy"}
-          subHeading={"FULL STACK DEVELOPER INTERN"}
-          fromDate={"2021"}
+          heading={"Decagon Institute"}
+          subHeading={"FULL STACK DEVELOPER"}
+          fromDate={"2022"}
           toDate={"Present"}
         />
         <div className="experience-description">
           <span className="resume-description-text">
-            Currently working as MERN stack web and mobile developer and also an
-            online instructor on udemy.
+            Currently working as a NODEjs developer.
           </span>
         </div>
         <div className="experience-description">
           <span className="resume-description-text">
-            - Developed an ecommerce website for client with the dashboard for
-            managing the products, managing reviews, users, payment etc. .
+            - developed a content management system that allows users to build webpages and blogs . .
           </span>
           <br />
           <span className="resume-description-text">
@@ -248,7 +246,7 @@ const Resume = (props) => {
 
   return (
     <div
-      className="resume-container screen-container fade-in"
+      className="resume-container screen-container "
       id={props.id || ""}
     >
       <div className="resume-content">
